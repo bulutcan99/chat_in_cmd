@@ -4,13 +4,13 @@ import socket
 choice = input("Host for '1' or to guest for '2': ")
 if choice == '1':
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind(("Your IPv4 Adress", 9999))
+    server.bind(("Your IPv4 Address", 9999))
     server.listen()
     client, _ = server.accept()
 
 elif choice == '2':
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.connect(("Your IPv4 Adress", 9999))
+    client.connect(("Your IPv4 Address", 9999))
 
 else:
     exit()
